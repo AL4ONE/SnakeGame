@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.game-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(48, 1fr);
+}
+
+.col{
+    width: 20px;
+    height: 20px;
+    border: 1px black solid;
+}
+
+.snake{
+    background-color: green !important;
+}
+
+.food{
+    background-color: red !important;
+}
+
+.col:nth-child(even){
+    background-color: rgb(252, 151, 108);
+}
+.col:nth-child(odd){
+    background-color: rgb(255, 244, 41);
+}
+
+.row:nth-child(even) .col:nth-child(odd){
+    background-color: rgb(252, 151, 108);
+}
+
+.row:nth-child(even) .col:nth-child(even) {
+    background-color: rgb(255, 244, 41);
+}
