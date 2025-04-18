@@ -149,7 +149,7 @@ let inFood = setInterval(function () {
 
 let inMove = setInterval(function () {
     movePhy()
-}, 200)
+}, 150)
 
 
 
