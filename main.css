@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.game-screen{
+.game-screen {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,32 +12,33 @@
     height: 100vh;
 }
 
-.row{
+.row {
     display: grid;
     grid-template-columns: repeat(48, 1fr);
 }
 
-.col{
+.col {
     width: 15px;
     height: 15px;
 }
 
-.snake{
+.snake {
     background-color: green !important;
 }
 
-.food{
+.food {
     background-color: rgb(0, 60, 255) !important;
 }
 
-.col:nth-child(even){
+.col:nth-child(even) {
     background-color: rgb(252, 151, 108);
 }
-.col:nth-child(odd){
+
+.col:nth-child(odd) {
     background-color: rgb(255, 244, 41);
 }
 
-.row:nth-child(even) .col:nth-child(odd){
+.row:nth-child(even) .col:nth-child(odd) {
     background-color: rgb(252, 151, 108);
 }
 
@@ -45,7 +46,7 @@
     background-color: rgb(255, 244, 41);
 }
 
-.button{
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,25 +56,73 @@
     margin-top: 1rem;
 }
 
-.button .btn-top, .btn-left, .btn-down, .btn-right{
+.button .btn-top,
+.btn-left,
+.btn-down,
+.btn-right {
     width: 50px;
     height: 50px;
-background-color: rgb(255, 244, 41);
+    background-color: rgb(255, 244, 41);
 }
 
-.btn-top{
-        width: 50px;
-        height: 50px;
-        background-color: rgb(252, 151, 108) !important;
+.btn-top {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(252, 151, 108) !important;
 }
 
-.btn-down{
-        width: 50px;
-        height: 50px;
-            background-color: rgb(252, 151, 108);
+.btn-down {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(252, 151, 108);
 }
 
-.mid{
+.mid {
     display: flex;
     gap: 3rem;
+}
+
+@media screen and (min-width: 320px) {
+.col {
+        width: 6px;
+        height: 6px;
+    }
+}
+@media screen and (min-width: 375px) {
+.col {
+        width: 7px;
+        height: 7px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+.col {
+        width: 9px;
+        height: 9px;
+    }
+}
+@media screen and (min-width: 425px) {
+.col {
+        width: 9px;
+        height: 9px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+.col {
+        width: 15px;
+        height: 15px;
+    }
+
+
+}
+@media screen and (min-width: 1024px) {
+.col {
+        width: 20px;
+        height: 20px;
+    }
+
+    .button{
+        display: none;
+    }
 }
