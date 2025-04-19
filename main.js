@@ -3,6 +3,10 @@ let grids = []
 let rowCount = 30;
 let colCount = 48;
 let scoreElement = document.querySelector(".score-element")
+let btnTop = document.querySelector('.btn-top')
+let btnDown = document.querySelector('.btn-down')
+let btnLeft = document.querySelector('.btn-left')
+let btnRight = document.querySelector('.btn-right')
 let score = 6
 scoreElement.innerHTML = score
 for (let row = 0; row < rowCount; row++) {
@@ -128,6 +132,27 @@ document.addEventListener("keydown", e => {
     } else if ((e.key == "d" || e.key == "ArrowRight") && direction != "left") {
         direction = "right"
     }
+})
+
+btnTop.addEventListener("click", e => {
+    if(direction != "down"){
+        direction = "up"
+    }    
+})
+btnDown.addEventListener("click", e => {
+    if (direction != "up"){
+        direction = "down"
+    }    
+})
+btnLeft.addEventListener("click", e => {
+    if(direction != "right"){
+        direction = "left"
+    }    
+})
+btnRight.addEventListener("click", e => {
+    if(direction != "left"){
+        direction = "right"
+    }    
 })
 
 function randomize(min,max){
