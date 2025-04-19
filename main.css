@@ -20,7 +20,6 @@
 .col{
     width: 15px;
     height: 15px;
-    border: 1px black solid;
 }
 
 .snake{
@@ -28,7 +27,7 @@
 }
 
 .food{
-    background-color: red !important;
+    background-color: rgb(0, 60, 255) !important;
 }
 
 .col:nth-child(even){
