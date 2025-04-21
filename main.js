@@ -108,7 +108,7 @@ function movePhy() {
     }
 
     phytonPos.unshift(newHead)
-    if (grids[newHead.row][newHead.col].classList.contains('snake')){
+    if (grids[newHead.row][newHead.col].classList.contains('snake') || grids[newHead.row][newHead.col].classList.contains('stone')){
         gameOver()
     }
     grids[newHead.row][newHead.col].classList.add('snake')
@@ -117,6 +117,7 @@ function movePhy() {
         grids[newHead.row][newHead.col].classList.remove("food")
         score++
         scoreElement.innerHTML = score
+        spawnStone()
     }else{
         phytonPos.pop()
     }
@@ -161,11 +162,11 @@ function randomize(min,max){
 
 function drawFood(){
     let rowFood = randomize(0, rowCount - 1)
-    let colFood = randomize(0, rowCount - 1)
+    let colFood = randomize(0, colCount - 1)
     grids[rowFood][colFood].classList.add('food')
     setTimeout(function(){
         grids[rowFood][colFood].classList.remove('food')
-    },5000)
+    },6500)
 }
 
 let inFood = setInterval(function () {
@@ -185,4 +186,15 @@ function gameOver(){
     clearInterval(inFood)
     clearInterval(inMove)
 
+}
+
+function spawnStone() {
+    let rowStone = randomize(0, rowCount - 1)
+    let colStone = randomize(0, colCount - 1)
+
+    if (grids[rowStone][colStone].classList.contains("snake") || grids[rowStone][colStone].classList.contains("food")) {
+        spawnStone()
+        return
+    }
+    grids[rowStone][colStone].classList.add("stone")
 }

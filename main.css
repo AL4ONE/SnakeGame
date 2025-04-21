@@ -24,26 +24,27 @@
 
 .snake {
     background-color: green !important;
+    border: 1px solid black;
 }
 
 .food {
-    background-color: rgb(0, 60, 255) !important;
+    background-color: rgb(255, 0, 0) !important;
 }
 
 .col:nth-child(even) {
-    background-color: rgb(252, 151, 108);
+    background-color: rgb(34, 97, 181);
 }
 
 .col:nth-child(odd) {
-    background-color: rgb(255, 244, 41);
+    background-color: rgb(41, 41, 155);
 }
 
 .row:nth-child(even) .col:nth-child(odd) {
-    background-color: rgb(252, 151, 108);
+    background-color: rgb(34, 97, 181);
 }
 
 .row:nth-child(even) .col:nth-child(even) {
-    background-color: rgb(255, 244, 41);
+    background-color: rgb(41, 41, 155);
 }
 
 .button {
@@ -62,19 +63,22 @@
 .btn-right {
     width: 50px;
     height: 50px;
-    background-color: rgb(255, 244, 41);
+    background-color: rgb(41, 41, 155);
+    color: white;
 }
 
 .btn-top {
     width: 50px;
     height: 50px;
-    background-color: rgb(252, 151, 108) !important;
+    background-color: rgb(34, 97, 181) !important;
+    color: white;
 }
 
 .btn-down {
     width: 50px;
     height: 50px;
-    background-color: rgb(252, 151, 108);
+    background-color: rgb(34, 97, 181);
+    color: white;
 }
 
 .mid {
@@ -125,4 +129,8 @@
     .button{
         display: none;
     }
+}
+
+.stone{
+    background-color: rgb(0, 0, 0) !important;
 }
